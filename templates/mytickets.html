@@ -1,0 +1,13 @@
+<ion-view title="My Tickets">
+    <ion-content class="has-header">
+        <div class="list">
+
+            <!--div class="item item-divider">Upcoming</div-->
+            <a class="item item-avatar" href="#/app/printticket/{{myticket.user}}/{{myticket.eventid}}" ng-repeat="myticket in data">
+                <img src="/eglapp/eglapp/{{myticket.logo}}">
+                <h2>{{myticket.eventtitle}}</h2>
+                <span class="date">{{myticket.startdate}} @ 9:30 PM<span>
+                    </a>
+
+                        </ion-content>
+                        </ion-view>
