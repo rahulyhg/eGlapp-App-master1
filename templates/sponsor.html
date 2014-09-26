@@ -1,0 +1,212 @@
+<ion-view title="Sponsor">
+    <ion-content class="has-header">
+            <div class="item item-divider">
+               Sponsor Details
+           </div>
+            <div class="row" ng-show="topdiv">
+                <div class="col">
+                 Category
+                 <p>
+                     <select ng-model="form.category" required>					
+                        <option value="category1">category1</option>
+                        <option value="category2">category2</option>
+                     </select>
+                </p>
+                </div>
+                <div class="col">
+                 Sub Category
+                 <p>
+                     <select ng-model="form.subcategory" required>					
+                        <option value="subcategory1">subcategory1</option>
+                        <option value="subcategory2">subcategory2</option>
+                     </select>
+                </p>
+                </div>
+                <div class="col">
+                 Event
+                 <p>
+                     <select ng-model="form.event" required>					
+                        <option value="event1">Bollywood Tourism1</option>
+                        <option value="event2">Chill Out</option>
+                     </select>
+                </p>
+                </div>
+            </div>
+            <div ng-show="detail">
+                <h4>{{alldata.title}}</h4>
+            </div>
+            <div class="row" ng-show="detail">
+               <div class="col">
+                   <img src="{{'http://localhost/eglapp11/demo/'+alldata.logo}}" class="full-image">
+               </div>
+               <div class="col">
+                    <h4>When</h4>
+                    <p>
+                        From : {{alldata.startdate}} AT : {{alldata.starttime}}
+                    </p>
+                    <p>
+                        To : {{alldata.enddate}} AT : {{alldata.endtime}}
+                    </p>
+                    <p>
+                        Location : {{alldata.location}}
+                    </p>
+               </div>
+               <div class="col">
+                    <h4>Organizer</h4>
+                    <p>
+                       {{alldata.organizername}}
+                    </p>
+                    <p>
+                        <p ng-bind-html="alldata.orgdescription"></p>
+                    </p>
+               </div>
+             </div>
+             <div>
+                 <table class="tableborder table" border="1">
+                     <tr>
+                         <th>
+                             Select Option
+                         </th>
+                         <th>
+                             
+                         </th>
+                         <th>
+                             Impression
+                         </th>
+                         <th>
+                             Amount
+                         </th>
+                     </tr>
+                     <tr>
+                         <td>
+                             <input type="checkbox">
+                         </td>
+                         <td>
+                             Pre qr Code Ad 
+                         </td>
+                         <td>
+                             <input type="text" class="inputborder">
+                         </td>
+                         <td>
+                             $0
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <input type="checkbox">
+                         </td>
+                         <td>
+                             Post qr Code Ad 
+                         </td>
+                         <td>
+                             <input type="text" class="inputborder">
+                         </td>
+                         <td>
+                             $0
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <input type="checkbox">
+                         </td>
+                         <td>
+                             Email Reminder 
+                         </td>
+                         <td>
+                             <input type="text" class="inputborder">
+                         </td>
+                         <td>
+                             $0
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <input type="checkbox">
+                         </td>
+                         <td>
+                             Email Confirmation 
+                         </td>
+                         <td>
+                             <input type="text" class="inputborder">
+                         </td>
+                         <td>
+                             $0
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <input type="checkbox">
+                         </td>
+                         <td>
+                             Print
+                         </td>
+                         <td>
+                            <div class="row">
+                                <div class="col">
+                                     <input type="text" class="inputborder"style="width:50px;" disabled>
+                                </div>
+                                <div class="col">
+                                     <input type="text" class="inputborder"style="width:70px;">
+                                </div>
+                             </div>
+                         </td>
+                         <td>
+                             $0
+                         </td>
+                     </tr>
+                 </table>
+             </div>
+            
+            <label class="item item-input item-stacked-label">
+                <form action="http://localhost/eglapp11/admin/index.php/event/filee" method="POST" enctype="multipart/form-data">
+                    <span class="input-label">Banner</span>
+                    <input type="file" name="file" id="file">
+                    <p>
+                    <button name="submit">Save</button>
+                    </p>
+                </form>
+            </label>
+               <div>
+                  <p>
+                   Ticket Banner Position
+                   </p>
+               </div>
+            <div class="row">
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smallheight">
+                        26 Remaining
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="button button-full button-balanced" ng-click="onsubmit(form)">Save</a>
+        
+    </ion-content>
+</ion-view>

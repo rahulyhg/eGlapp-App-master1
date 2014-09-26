@@ -66,6 +66,33 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.updateevent', {
+        url: "/updateevent/:id",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/updateevent.html",
+            controller: 'UpdateeventCtrl'
+        }
+      }
+    })
+    .state('app.register', {
+        url: "/register/:id/:uid",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/register-event.html",
+            controller: 'RegisterEvent'
+        }
+      }
+    })
+    .state('app.create-event', {
+        url: "/createevent",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/create-event.html",
+            controller: 'CreateeventCtrl'
+        }
+      }
+    })  
     .state('app.mytickets', {
         url: "/mytickets",
       views: {
@@ -74,8 +101,50 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             controller: 'MyticketsCtrl'
         }
       }
+    })  
+    .state('app.myevents', {
+        url: "/myevents",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/myevents.html",
+            controller: 'MyeventsCtrl'
+        }
+      }
+    })  
+    .state('app.myprofile', {
+        url: "/myprofile",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/myprofile.html",
+            controller: 'MyprofileCtrl'
+        }
+      }
+    })   
+    .state('app.sponsore', {
+        url: "/sponsore/:eid",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/sponsor.html",
+            controller: 'SponsorCtrl'
+        }
+      }
+    })  
+    .state('app.sponsor', {
+        url: "/sponsor",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/sponsor.html",
+            controller: 'SponsorCtrl'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/discover');
-});
+})
+
+.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}])
 

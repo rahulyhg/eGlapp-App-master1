@@ -13,6 +13,109 @@ h5,
 h6 {
     font-family: 'Oswald';
 }
+/*my css*/
+.mrt3{
+    margin-top: 3px;
+}
+.drop-box {
+        width: 98%;
+        height: 50%;
+        color: black;
+        background: rgb(228, 241, 255);
+        padding: 10px;
+        }
+.qrimage{
+    position: absolute;
+
+    right: 20px;
+    height: 140px;
+    width: 146px;
+    -webkit-transition: all 5s;
+    opacity: 0;
+}
+.qrcodeimg{
+    position: absolute;
+
+    right: 20px;
+    height: 140px;
+    width: 146px;
+}
+.nodisplay{
+    display: none;
+}
+.mrt17{
+    margin-top: 17px;
+}
+.mrl3{
+    margin-left: 3px;
+}
+.mrl70{
+    margin-left: 70px !important;
+}
+.mrl35{
+    margin-left: 35px !important;
+}
+.greendiv{
+    background-color: green;
+}
+.reddiv{
+    background-color: red;
+}
+.sponsorbanner{
+    
+border: 3px solid #D6D6D6;
+padding: 10px;
+    height: 100px;
+width: 84px;
+margin-left: 10px;
+}
+.sponsortop{
+border: 3px solid #D6D6D6;
+padding: 10px;
+}
+.mrt10{
+    margin-top: 10px;
+}
+.signup{
+    width: 200px;
+}
+.invalidmsg{
+    color: red;
+}
+.date1{
+    width: 198px !important;
+}
+/*my css*/
+.ng-invalid.ng-dirty { border: 1px solid red; }
+/* fancy selector */
+fancy-select .list {
+  margin: -1px 0; }
+
+/* Items */
+/* line 13, ../scss/modules/_fancy-select.scss */
+.fancy-select-items {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  /* line 19, ../scss/modules/_fancy-select.scss */
+  .fancy-select-items .item {
+    overflow: hidden;
+    /* Clearfix */ }
+
+/* line 24, ../scss/modules/_fancy-select.scss */
+.fancy-select-items label p {
+  height: 32px;
+  line-height: 32px; }
+
+/* line 29, ../scss/modules/_fancy-select.scss */
+.fancy-select-icon {
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+  text-align: center; }
+/* fancy selector */
+
 .date {
     font-size: 11px;
     color: #898989;
@@ -41,4 +144,39 @@ h6 {
 }
 .bar .title {
     font-size: 20px;
+}
+.divborder{
+border: 5px solid black;
+}
+.tableborder{
+    border-style:solid solid none solid;
+border: 2px solid #D6D6D6;
+}
+.table tr td
+{
+    border-style:solid none none none;
+    text-align: center;
+
+}
+.table tr
+{
+    border-style:solid none none none;
+
+}
+.table
+{
+    width: 100%;
+    padding: 10px;
+}
+.inputborder
+{
+    outline:solid 1px #D6D6D6;
+
+}
+.smallheight
+{
+    height:70px;
+    background: red;
+    color:white;
+
 }
