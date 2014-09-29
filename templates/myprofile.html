@@ -21,29 +21,26 @@
                 Note * Upload 200px : 200px Image
             </label>
             <label>
-                <span><img src="{{'http://localhost/eglapp11/demo/'+organizer.logo}}" width="200px" height="200px" ng-show="organizer.logo!=''"></span>
+                <!-- <span><img src="{{'http://localhost/eglapp11/demo/'+organizer.logo}}" width="200px" height="200px" ng-show="organizer.logo!=''"></span> -->
                 
                         <button class="button button-icon icon ion-android-camera" ng-click="takePicture();"></button>
                         <img id="photoHolder" src="{{cameraimage}}" alt="" style="height:100%; margin-left:5px;"></img>
-                <input type="file" name="file" ng-model="organizer.logo">
-                <p>Note: (Upload 200px : 200px Image) </p>
-                
                 
                 <!--............................................Filr upload..................................................-->
                 
-                <div class="upload-div" ng-controller="MyCtrl">
+                <!-- <div class="upload-div" ng-controller="MyCtrl">
                     <div ng-init="httpMethod = 'POST';howToSend = 1;" ></div>
-
+                
                     <div class="upload-buttons">
                         <input type="file" ng-file-select="onFileSelect($files)" onclick="this.value=null">
                     </div>
-
+                
                     <div ng-show="dropSupported" class="drop-box" ng-file-drop="onFileSelect($files)" ng-file-drop-available="dropSupported=true"
                         ng-file-drag-over-class="dragOverClass($event)" ng-file-drag-over-delay="100">or drop files here</div>
                     <div ng-show="!dropSupported">HTML5 Drop File is not supported on this browser</div>
-
+                
                     <div class="err" ng-show="errorMsg != null">{{errorMsg}}</div>
-
+                
                     <div ng-show="selectedFiles != null">
                         <div class="sel-file" ng-repeat="f in selectedFiles">
                             <div ng-show="$last">
@@ -53,13 +50,13 @@
                     </div>
                     <div class="response" ng-show="uploadResult.length > 0">
                         <span ng-repeat="result in uploadResult">
-
+                
                                     <p ng-show="$last">{{result}}</p>
-
+                
                         </span>
-
+                
                     </div>
-                </div>
+                </div> -->
                 
                 <!--............................................Filr upload..................................................-->
                 
