@@ -325,7 +325,7 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
         });
 
         //Upload photo
-        var server = 'http://wohlig.biz/Toykraftbackend/index.php/json/uploadfile';
+        var server = 'http://digitalmindsinc.co/eglapp11/admin/index.php/event/filee';
 
         //File Upload parameters: source, filePath, options
         $scope.uploadPhoto = function () {
