@@ -2,7 +2,7 @@ var mypopup=0;
 
 var authenticate=$.jStorage.get("authenticate");
 window.uploadUrl = 'upload.php';
-angular.module('starter.controllers', ['restservicemod','angularFileUpload'])
+angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngCordova'])
 //...........................upload image
 
 .controller('MyCtrl', function($scope, $http, $timeout, $upload,RestService) {
@@ -280,7 +280,7 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload'])
         
 })      
 
-.controller('MyprofileCtrl', function($scope, $stateParams, RestService, $http, $timeout, $upload) {
+.controller('MyprofileCtrl', function($scope, $stateParams, RestService, $http, $timeout, $upload, $cordovaCamera, $cordovaFile) {
     
      console.log("my upload");
      $scope.myupload=RestService.getuploads();
@@ -303,6 +303,55 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload'])
           }
         
     //aunthenticate
+    
+    
+    //Capture Image
+    $scope.takePicture = function () {
+        var options = {
+            quality: 20,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.CAMERA,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            saveToPhotoAlbum: true
+        };
+
+        $cordovaCamera.getPicture(options).then(function (imageData) {
+            // Success! Image data is here
+            $scope.cameraimage = imageData;
+            $scope.uploadPhoto();
+        }, function (err) {
+            // An error occured. Show a message to the user
+        });
+
+        //Upload photo
+        var server = 'http://localhost/eglapp11/index.php/event/filee';
+
+        //File Upload parameters: source, filePath, options
+        $scope.uploadPhoto = function () {
+            console.log("function called");
+            $cordovaFile.uploadFile(server, $scope.cameraimage, options)
+                .then(function (result) {
+
+                    console.log(result);
+                    result = JSON.parse(result.response);
+                    filenameee = result;
+                    $scope.filename2 = result.file_name;
+                    $scope.addretailer.store_image = $scope.filename2;
+
+                }, function (err) {
+                    // Error
+                    console.log(err);
+                    console.log("Error");
+                }, function (progress) {
+                    // constant progress updates
+                    console.log("Progress");
+                });
+
+        };
+
+    }
+    
     //...................................start saveorganizer.................................................
     var saved = function (data, status) {
 	            console.log(data);

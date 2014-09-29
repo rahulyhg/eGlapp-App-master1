@@ -22,8 +22,11 @@
             </label>
             <label>
                 <span><img src="{{'http://localhost/eglapp11/demo/'+organizer.logo}}" width="200px" height="200px" ng-show="organizer.logo!=''"></span>
-                <!-- <input type="file" name="file" ng-model="organizer.logo">
-                <p>Note: (Upload 200px : 200px Image) </p> -->
+                
+                        <button class="button button-icon icon ion-android-camera" ng-click="takePicture();"></button>
+                        <img id="photoHolder" src="{{cameraimage}}" alt="" style="height:100%; margin-left:5px;"></img>
+                <input type="file" name="file" ng-model="organizer.logo">
+                <p>Note: (Upload 200px : 200px Image) </p>
                 
                 
                 <!--............................................Filr upload..................................................-->
