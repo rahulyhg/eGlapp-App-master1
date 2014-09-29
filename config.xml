@@ -18,12 +18,14 @@
 
     <icon src="eglapp.png" /> 
     <preference name="permissions" value="none"/>
-    <preference name="fullscreen" value="false" />
+    <preference name="fullscreen" value="false"/>
     <preference name="orientation" value="portrait" />
-    <preference name="splash-screen-duration" value="10000" />
-    
-    
-	
+    <preference name="splash-screen-duration" value="10000"/>
+    <gap:plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+     <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.file"/>
+    <gap:plugin name="org.apache.cordova.file-transfer"  />
     <access origin="*"/> 
 
 </widget>
