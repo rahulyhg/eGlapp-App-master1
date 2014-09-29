@@ -309,11 +309,9 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
     $scope.takePicture = function () {
         var options = {
             quality: 40,
-            destinationType: Camera.DestinationType.FILE_URI,
+            destinationType: Camera.DestinationType.DATA_URL,
             sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-            allowEdit: true,
-            encodingType: Camera.EncodingType.JPEG,
-            saveToPhotoAlbum: true
+            encodingType: Camera.EncodingType.JPEG
         };
 
         $cordovaCamera.getPicture(options).then(function (imageData) {
@@ -346,7 +344,7 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
                 }, function (progress) {
                     // constant progress updates
                 console.log("progress");
-                   // alert("Progress");
+                    alert("Progress");
                 });
 
         };
