@@ -309,7 +309,7 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
     $scope.takePicture = function () {
         var options = {
             quality: 40,
-            destinationType: Camera.DestinationType.NATIVE_URI,
+            destinationType: Camera.DestinationType.DATA_URL,
             sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
             encodingType: Camera.EncodingType.JPEG
         };
