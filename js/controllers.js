@@ -325,7 +325,7 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
         });
 
         //Upload photo
-        var server = 'http://digitalmindsinc.co/eglapp11/admin/index.php/event/filee';
+        var server = 'http://digitalmindsinc.co/eglapp11/admin/index.php/event/uploadfile';
 
         //File Upload parameters: source, filePath, options
         $scope.uploadPhoto = function () {
@@ -341,11 +341,12 @@ angular.module('starter.controllers', ['restservicemod','angularFileUpload','ngC
 
                 }, function (err) {
                     // Error
-                    console.log(err);
+                    //console.log(err);
                     console.log("Error");
                 }, function (progress) {
                     // constant progress updates
-                    alert("Progress");
+                console.log("progress");
+                   // alert("Progress");
                 });
 
         };
